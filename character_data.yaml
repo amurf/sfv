@@ -1,17 +1,17 @@
-moves:
-  Kusabi: QCF+P, P, D+K
-  Hochu: QCF+P, P, D+P
-  Tenko: QCF+K, P
-  Orochi: QCF+K, D+P
-  Mujin: QCB+K
-  Ressenha: QCB+P
-confirms:
-  - st.LK, st.LK
-  - cr.LP, st.LP
-  - cr.MP, st.MP
-  - cr.MP, cr.MK
-state:
-  vt1:
+karin:
+  moves:
+    Kusabi: QCF+P, P, D+K
+    Hochu: QCF+P, P, D+P
+    Tenko: QCF+K, P
+    Orochi: QCF+K, D+P
+    Mujin: QCB+K
+    Ressenha: QCB+P
+  confirms:
+    - st.LK, st.LK
+    - cr.LP, st.LP
+    - cr.MP, st.MP
+    - cr.MP, cr.MK
+  state:
     - description: VT1 Active
       combos:
         - starter: j.HP
@@ -35,7 +35,7 @@ state:
               damage: 511
               stun: 499
         - starter: cr.MP
-          description: cr.MP (close/mid range)
+          description: (close/mid range)
           position: mid
           variations:
             - combo: cr.MP, st.MP xx Tenko, Guren Kusabi/Hochu
@@ -55,7 +55,7 @@ state:
               damage: 454
               stun: 404
         - starter: cr.MP
-          description: cr.MP (far range)
+          description: (far range)
           position: mid
           variations:
             - combo: cr.MP, cr.MK xx Tenko, Guren Kusabi/Hochu
@@ -75,7 +75,7 @@ state:
               damage: 445
               stun: 404
         - starter: cr.LP
-          description: cr.LP (close/mid range)
+          description: (close/mid range)
           position: mid
           variations:
             - combo: cr.LP, st.LP xx Tenko, Guren Kusabi/Hochu
@@ -95,7 +95,7 @@ state:
               damage: 387
               stun: 347
         - starter: st.LK
-          description: st.LK (close/mid range)
+          description: (close/mid range)
           position: mid
           variations:
             - combo: st.LK, st.LK xx Tenko, Guren Kusabi/Hochu
@@ -114,7 +114,6 @@ state:
               meter: 3
               damage: 416
               stun: 347
-  no_trigger:
     - description: No trigger
       combos:
         - starter: j.HP
@@ -138,7 +137,7 @@ state:
               damage: 487
               stun: 470
         - starter: cr.MP
-          description: cr.MP (close/mid range)
+          description: (close/mid range)
           position: mid
           variations:
             - combo: cr.MP, st.MP xx Tenko, Orochi
@@ -158,7 +157,7 @@ state:
               damage: 430
               stun: 375
         - starter: cr.MP
-          description: cr.MP (far range)
+          description: (far range)
           position: mid
           variations:
             - combo: cr.MP, cr.MK xx Tenko, Orochi
@@ -177,7 +176,7 @@ state:
               meter: 3
               damage: 421
         - starter: cr.LP
-          description: cr.LP (close/mid range)
+          description: (close/mid range)
           position: mid
           variations:
             - combo: cr.LP, st.LP xx Tenko, Orochi
@@ -197,7 +196,7 @@ state:
               damage: 363
               stun: 318
         - starter: st.LK
-          description: st.LK (close/mid range)
+          description: (close/mid range)
           position: mid
           variations:
             - combo: st.LK, st.LK xx Tenko, Orochi
