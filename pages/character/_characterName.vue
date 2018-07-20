@@ -61,6 +61,7 @@ li {
   font-size: 100px;
   color: #35495e;
   letter-spacing: 1px;
+  text-transform: capitalize;
 }
 
 .subtitle {
