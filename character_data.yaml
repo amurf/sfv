@@ -14,122 +14,11 @@ karin:
     - cr.LP (ch), cr.MP, st.MP
     - cr.MP (ch), st.HP
   state:
-    - description: VT1 Active
-      combos:
-        - starter: j.HP
-          description: Jump In
-          position: mid
-          variations:
-            - combo: j.HP, cr.HP xx Tenko, Guren Kusabi/Hochu
-              meter: 0
-              damage: 340
-              stun: 499
-            - combo: j.HP, cr.HP xx Tenko, EX Tenko, Guren Kusabi/Hochu
-              meter: 1
-              damage: 387
-              stun: 563
-            - combo: j.HP, cr.HP xx EX Orochi, EX Tenko, Guren Kusabi/Hochu
-              meter: 2
-              damage: 445
-              stun: 661
-            - combo: j.HP, cr.HP xx Tenko, Guren Hochu xx CA
-              meter: 3
-              damage: 511
-              stun: 499
-        - starter: j.HP
-          description: Jump In
-          position: corner
-          variations:
-            - combo: j.HP, cr.HP xx EX Orochi, Guren Kusabi/Hochu
-              meter: 1
-              damage: 380
-              stun: 579
-        - starter: cr.MP
-          description: (close/mid range)
-          position: mid
-          variations:
-            - combo: cr.MP, st.MP xx Tenko, Guren Kusabi/Hochu
-              meter: 0
-              damage: 283
-              stun: 404
-            - combo: cr.MP, st.MP xx Tenko, EX Tenko, Guren Kusabi/Hochu
-              meter: 1
-              damage: 330
-              stun: 522
-            - combo: cr.MP, st.MP xx EX Orochi, EX Tenko, Guren Kusabi/Hochu
-              meter: 2
-              damage: 388
-              stun: 566
-            - combo: cr.MP, st.MP xx Tenko, Guren Hochu xx CA
-              meter: 3
-              damage: 454
-              stun: 404
-        - starter: cr.MP
-          description: (far range)
-          position: mid
-          variations:
-            - combo: cr.MP, cr.MK xx Tenko, Guren Kusabi/Hochu
-              meter: 0
-              damage: 274
-              stun: 404
-            - combo: cr.MP, cr.MK xx Tenko, EX Tenko, Guren Kusabi/Hochu
-              meter: 1
-              damage: 321
-              stun: 468
-            - combo: cr.MP, cr.MK xx EX Tenko, EX Tenko, Guren Kusabi/Hochu
-              meter: 2
-              damage: 361
-              stun: 508
-            - combo: cr.MP, cr.MK xx Tenko, Guren Hochu xx CA
-              meter: 3
-              damage: 445
-              stun: 404
-        - starter: cr.LP
-          description: (close/mid range)
-          position: mid
-          variations:
-            - combo: cr.LP, st.LP xx Tenko, Guren Kusabi/Hochu
-              meter: 0
-              damage: 216
-              stun: 347
-            - combo: cr.LP, st.LP xx Tenko, EX Tenko, Guren Kusabi/Hochu
-              meter: 1
-              damage: 263
-              stun: 411
-            - combo: cr.LP, st.LP xx EX Tenko, EX Tenko, Guren Kusabi/Hochu
-              meter: 2
-              damage: 303
-              stun: 451
-            - combo: cr.LP, st.LP xx Tenko, Guren Hochu xx CA
-              meter: 3
-              damage: 387
-              stun: 347
-        - starter: st.LK
-          description: (close/mid range)
-          position: mid
-          variations:
-            - combo: st.LK, st.LK xx Tenko, Guren Kusabi/Hochu
-              meter: 0
-              damage: 245
-              stun: 357
-            - combo: st.LK, st.LK xx Tenko, EX Tenko, Guren Kusabi/Hochu
-              meter: 1
-              damage: 292
-              stun: 411
-            - combo: st.LK, st.LK xx EX Orochi, EX Tenko, Guren Kusabi/Hochu
-              meter: 2
-              damage: 350
-              stun: 509
-            - combo: st.LK, st.LK xx Tenko, Guren Hochu xx CA
-              meter: 3
-              damage: 416
-              stun: 347
     - description: No trigger
       combos:
         - starter: j.HP
           description: Jump In
-          position: mid
-          variations:
+          midscreen:
             - combo: j.HP, cr.MP, st.MP xx Tenko, Orochi
               meter: 0
               damage: 289
@@ -146,10 +35,7 @@ karin:
               meter: 3
               damage: 487
               stun: 470
-        - starter: j.HP
-          description: Jump In
-          position: corner
-          variations:
+          corner:
             - combo: j.HP, cr.MP, st.MP xx Tenko, Tenko
               meter: 0
               damage: 283
@@ -168,8 +54,7 @@ karin:
               stun: 435
         - starter: cr.MP
           description: (close/mid range)
-          position: mid
-          variations:
+          midscreen:
             - combo: cr.MP, st.MP xx Tenko, Orochi
               meter: 0
               damage: 226
@@ -188,8 +73,7 @@ karin:
               stun: 375
         - starter: cr.MP
           description: (far range)
-          position: mid
-          variations:
+          midscreen:
             - combo: cr.MP, cr.MK xx Tenko, Orochi
               meter: 0
               damage: 217
@@ -207,8 +91,7 @@ karin:
               damage: 421
         - starter: cr.LP
           description: (close/mid range)
-          position: mid
-          variations:
+          midscreen:
             - combo: cr.LP, st.LP xx Tenko, Orochi
               meter: 0
               damage: 159
@@ -227,8 +110,7 @@ karin:
               stun: 318
         - starter: st.LK
           description: (close/mid range)
-          position: mid
-          variations:
+          midscreen:
             - combo: st.LK, st.LK xx Tenko, Orochi
               meter: 0
               damage: 188
@@ -245,3 +127,105 @@ karin:
               meter: 3
               damage: 392
               stun: 318
+    - description: VT1 Active
+      combos:
+        - starter: j.HP
+          description: Jump In
+          midscreen:
+            - combo: j.HP, cr.HP xx Tenko, Guren Kusabi/Hochu
+              meter: 0
+              damage: 340
+              stun: 499
+            - combo: j.HP, cr.HP xx Tenko, EX Tenko, Guren Kusabi/Hochu
+              meter: 1
+              damage: 387
+              stun: 563
+            - combo: j.HP, cr.HP xx EX Orochi, EX Tenko, Guren Kusabi/Hochu
+              meter: 2
+              damage: 445
+              stun: 661
+            - combo: j.HP, cr.HP xx Tenko, Guren Hochu xx CA
+              meter: 3
+              damage: 511
+              stun: 499
+          corner:
+            - combo: j.HP, cr.HP xx EX Orochi, Guren Kusabi/Hochu
+              meter: 1
+              damage: 380
+              stun: 579
+        - starter: cr.MP
+          description: (close/mid range)
+          midscreen:
+            - combo: cr.MP, st.MP xx Tenko, Guren Kusabi/Hochu
+              meter: 0
+              damage: 283
+              stun: 404
+            - combo: cr.MP, st.MP xx Tenko, EX Tenko, Guren Kusabi/Hochu
+              meter: 1
+              damage: 330
+              stun: 522
+            - combo: cr.MP, st.MP xx EX Orochi, EX Tenko, Guren Kusabi/Hochu
+              meter: 2
+              damage: 388
+              stun: 566
+            - combo: cr.MP, st.MP xx Tenko, Guren Hochu xx CA
+              meter: 3
+              damage: 454
+              stun: 404
+        - starter: cr.MP
+          description: (far range)
+          midscreen:
+            - combo: cr.MP, cr.MK xx Tenko, Guren Kusabi/Hochu
+              meter: 0
+              damage: 274
+              stun: 404
+            - combo: cr.MP, cr.MK xx Tenko, EX Tenko, Guren Kusabi/Hochu
+              meter: 1
+              damage: 321
+              stun: 468
+            - combo: cr.MP, cr.MK xx EX Tenko, EX Tenko, Guren Kusabi/Hochu
+              meter: 2
+              damage: 361
+              stun: 508
+            - combo: cr.MP, cr.MK xx Tenko, Guren Hochu xx CA
+              meter: 3
+              damage: 445
+              stun: 404
+        - starter: cr.LP
+          description: (close/mid range)
+          midscreen:
+            - combo: cr.LP, st.LP xx Tenko, Guren Kusabi/Hochu
+              meter: 0
+              damage: 216
+              stun: 347
+            - combo: cr.LP, st.LP xx Tenko, EX Tenko, Guren Kusabi/Hochu
+              meter: 1
+              damage: 263
+              stun: 411
+            - combo: cr.LP, st.LP xx EX Tenko, EX Tenko, Guren Kusabi/Hochu
+              meter: 2
+              damage: 303
+              stun: 451
+            - combo: cr.LP, st.LP xx Tenko, Guren Hochu xx CA
+              meter: 3
+              damage: 387
+              stun: 347
+        - starter: st.LK
+          description: (close/mid range)
+          midscreen:
+            - combo: st.LK, st.LK xx Tenko, Guren Kusabi/Hochu
+              meter: 0
+              damage: 245
+              stun: 357
+            - combo: st.LK, st.LK xx Tenko, EX Tenko, Guren Kusabi/Hochu
+              meter: 1
+              damage: 292
+              stun: 411
+            - combo: st.LK, st.LK xx EX Orochi, EX Tenko, Guren Kusabi/Hochu
+              meter: 2
+              damage: 350
+              stun: 509
+            - combo: st.LK, st.LK xx Tenko, Guren Hochu xx CA
+              meter: 3
+              damage: 416
+              stun: 347
