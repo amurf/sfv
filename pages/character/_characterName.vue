@@ -1,29 +1,45 @@
 <template>
-  <section class="container">
-    <div>
-      <h1 class="title">
-        {{ characterName }}
-      </h1>
-      <template v-for="state in characterData.state">
-        <h2>{{ state.description }}</h2>
-        <template v-for="combo in state.combos">
-          <h3>{{ combo.starter }} {{ combo.description }}</h3>
-          <ul>
-            <li v-for="variation in combo.variations">
-              {{ variation.combo }} ({{ variation.damage }}/{{ variation.stun }}), {{ meterUsage(variation.meter) }}
-            </li>
-          </ul>
-        </template>
-      </template>
+  <div>
+    <div class='header'>
+      <h1 class="title">{{ characterName }}</h1>
+      <img :src="characterHeaderImage" alt="" />
     </div>
-  </section>
+    <b-tabs>
+      <b-tab title="Basics">
+        <b-card-group deck>
+          <b-card header="Moves">
+            <ul>
+              <li v-for="(input, name) in characterData.moves">{{ name }}: {{ input }}</li>
+            </ul>
+          </b-card>
+          <b-card header="Confirms">
+            <ul>
+              <li v-for="confirm in characterData.confirms">{{ confirm }}</li>
+            </ul>
+          </b-card>
+        </b-card-group>
+      </b-tab>
+      <template v-for="state in characterData.state">
+        <b-tab :title="state.description">
+          <b-card v-for="combo in state.combos" :key="combo.description + combo.starter"
+            :header="combo.starter + ' - ' + combo.description">
+            <combo-list position="midscreen" :combos="combo.midscreen"></combo-list>
+            <combo-list position="corner" :combos="combo.corner" v-if="combo.corner"></combo-list>
+          </b-card>
+        </b-tab>
+      </template>
+    </b-tabs>
+  </div>
 </template>
 
 <script>
 
 import characterData from '~/character_data.yaml';
+import ComboList from '~/components/ComboList.vue';
+import { groupBy } from 'lodash';
 
 export default {
+  components: { ComboList },
   validate ({ params }) {
     return (characterData[params.characterName]);
   },
@@ -33,11 +49,11 @@ export default {
       characterName: params.characterName,
     };
   },
-  methods: {
-    meterUsage(meter) {
-      return meter == 0 ? 'meterless' : `${meter} bar`;
+  computed: {
+    characterHeaderImage() {
+      return `/${this.characterName}.gif`;
     },
-  }
+  },
 }
 </script>
 
@@ -46,34 +62,46 @@ li {
   list-style-type: none;
 }
 
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 80px;
   color: #35495e;
   letter-spacing: 1px;
   text-transform: capitalize;
+  text-align: center;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.header {
+  text-align: center;
+}
+
+.header .title, .header img {
+  display:inline-block;
+}
+
+.header img {
+  vertical-align: unset;
+  height: 100px;
 }
 
 .links {
   padding-top: 15px;
+}
+
+.meter, .damage-stun {
+  margin: 0.1em;
+}
+
+.combo-list {
+  text-align: left;
+}
+.card {
+  margin-top: 1em;
+}
+.tab-content {
+  padding: 1em;
 }
 </style>
 
