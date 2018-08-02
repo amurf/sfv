@@ -20,7 +20,7 @@
         </b-card-group>
       </b-tab>
       <template v-for="state in characterData.state">
-        <b-tab :title="state.description">
+        <b-tab :title="'Combos: ' + state.description">
           <b-card v-for="combo in state.combos" :key="combo.description + combo.starter"
             :header="combo.starter + ' - ' + combo.description">
             <combo-list position="midscreen" :combos="combo.midscreen"></combo-list>
