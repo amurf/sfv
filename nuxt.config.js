@@ -2,6 +2,9 @@ module.exports = {
   generate: {
     dir: 'dist-tmp'
   },
+  modules: [
+    'bootstrap-vue/nuxt',
+  ],
   /*
   ** Headers of the page
   */
