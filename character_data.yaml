@@ -34,6 +34,14 @@ karin:
               meter: 3
               damage: 511
               stun: 499
+        - starter: j.HP
+          description: Jump In
+          position: corner
+          variations:
+            - combo: j.HP, cr.HP xx EX Orochi, Guren Kusabi/Hochu
+              meter: 1
+              damage: 380
+              stun: 579
         - starter: cr.MP
           description: (close/mid range)
           position: mid
@@ -136,6 +144,26 @@ karin:
               meter: 3
               damage: 487
               stun: 470
+        - starter: j.HP
+          description: Jump In
+          position: corner
+          variations:
+            - combo: j.HP, cr.MP, st.MP xx Tenko, Tenko
+              meter: 0
+              damage: 283
+              stun: 450
+            - combo: j.HP, cr.HP xx Tenko, Tenko, EX Ressenha
+              meter: 1
+              damage: 360
+              stun: 555
+            - combo: j.HP, cr.HP xx Tenko, L Mujin, EX Tenko, EX Ressenha
+              meter: 2
+              damage: 418
+              stun: 625
+            - combo: j.HP, cr.HP xx Tenko, Tenko xx CA
+              meter: 3
+              damage: 480
+              stun: 435
         - starter: cr.MP
           description: (close/mid range)
           position: mid
