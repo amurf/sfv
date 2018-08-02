@@ -8,9 +8,11 @@ karin:
     Ressenha: QCB+P
   confirms:
     - st.LK, st.LK
-    - cr.LP, st.LP
+    - cr.LP, cr.LP
     - cr.MP, st.MP
     - cr.MP, cr.MK
+    - cr.LP (ch), cr.MP, st.MP
+    - cr.MP (ch), st.HP
   state:
     - description: VT1 Active
       combos:
