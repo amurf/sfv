@@ -9,6 +9,8 @@ services:
       - 3000:3000
     volumes:
       - "$PWD/pages:/sfv/pages"
+      - "$PWD/components:/sfv/components"
+      - "$PWD/character_data.yaml:/sfv/character_data.yaml"
   release:
     image: amurf/sfv-builder
     command: sh -c "npm run generate && mv /sfv/dist-tmp/* /sfv/dist"
