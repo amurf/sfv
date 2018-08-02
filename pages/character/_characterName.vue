@@ -39,6 +39,14 @@ import ComboList from '~/components/ComboList.vue';
 import { groupBy } from 'lodash';
 
 export default {
+  head() {
+    return {
+      title: this.characterName,
+      meta: [
+        { hid: 'description', name: 'description', content: 'SFV Karin notes' }
+      ]
+    };
+  },
   components: { ComboList },
   validate ({ params }) {
     return (characterData[params.characterName]);
